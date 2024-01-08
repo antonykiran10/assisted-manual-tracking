@@ -36,6 +36,18 @@ def play_video(video_path, output_csv):
             pass  # Do nothing, don't increment flag
         elif key == 27:  # 27 corresponds to the 'Esc' key
             break  # Exit the loop if 'Esc' is pressed
+        # elif key == ord('9'):
+        #     flag -= 1  # Decrement flag; to account for mislabelled frame
+        #     # Delete the last entry in the key pressed coloumn
+        #     data['Key Pressed'] = data['Key Pressed'][:-1]
+        #     key = cv2.waitKey(0) & 0xFF
+        #     data['Key Pressed'].append(chr(key))
+        #     if key == ord('1'):
+        #         flag += 1
+        #     elif key == ord('0'):
+        #         pass  # Do nothing, don't increment flag
+        #     elif key == 27:  # 27 corresponds to the 'Esc' key
+        #         break  # Exit the loop if 'Esc' is pressed
     cap.release()
     cv2.destroyAllWindows()
     
