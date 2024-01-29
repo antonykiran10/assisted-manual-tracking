@@ -57,4 +57,3 @@ Comments:
 *   The script saves the labeled data in a CSV file with columns: 'Frame Number', 'Timestamp (seconds)', and 'Key Pressed'.
 Message ChatGPT…
 
-ChatGPT can make mistakes. Consider checking important information.
