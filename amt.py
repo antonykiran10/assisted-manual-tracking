@@ -14,6 +14,8 @@ def play_video(video_path, output_csv):
         if not ret:
             break
 
+        frame = cv2.resize(frame, None, fx = 0.3, fy = 0.3)
+
         # Get the current frame's timestamp
         current_time = cap.get(cv2.CAP_PROP_POS_MSEC) / 1000.0
 
