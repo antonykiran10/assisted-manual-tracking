@@ -1,5 +1,15 @@
 import cv2
 import pandas as pd
+import tkinter as tk
+from tkinter import filedialog
+
+# Function to browse and select a video file
+def browse_file():
+    root = tk.Tk()
+    root.withdraw()  # Hide the root window
+
+    file_path = filedialog.askopenfilename()  # Open file dialog to select video file
+    return file_path
 
 def play_video(video_path, output_csv):
     cap = cv2.VideoCapture(video_path)
@@ -62,14 +72,16 @@ def play_video(video_path, output_csv):
 
 
 
+
 # main program starts here:
-my_path = '/home/antony/Desktop/nikita/' # Replace with the path to your video file
-video_name = '20230404_174850.mp4'  # Replace with the name of your video file
-video_path = my_path + video_name
-output_csv = my_path + video_name + '.csv'
+# my_path = '/media/antony/data_drive/Nikita/Taxol 2mg per kg males N=2/Videos/Day-00-Baseline-20-01-2024/Acetone test/Vehicle/Acetone/A-1-L/' #Taxol 2mg per kg males N=2/Videos/Day-00-Baseline-20-01-2024/Acetone test/Treated/Acetone/' # Replace with the path to your video file
+# video_name = '20240120_153842.mp4'  # Replace with the name of your video file
+# video_path = my_path + video_name
+
+video_path = browse_file()
+
+output_csv = output_csv = video_path + '.csv'
 frames = play_video(video_path, output_csv)
 fps = 30 # Put the frame rate of the video
 time = frames/fps
 print('Total time spend behaving: ', f"{time:.2f}", ' seconds') # you change the number of decimals places here
-
-
