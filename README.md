@@ -55,5 +55,4 @@ Comments:
 *   Some commented-out code segments are present, which can be uncommented if additional functionality is needed (e.g., decrementing the flag, deleting the last entry).
 *   The script assumes a frame rate of 30 frames per second (`fps`). Adjustments may be needed based on the actual frame rate of the video.
 *   The script saves the labeled data in a CSV file with columns: 'Frame Number', 'Timestamp (seconds)', and 'Key Pressed'.
-Message ChatGPT…
 
