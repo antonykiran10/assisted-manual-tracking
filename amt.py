@@ -24,13 +24,13 @@ def play_video(video_path, output_csv):
         if not ret:
             break
 
-        frame = cv2.resize(frame, None, fx = 0.3, fy = 0.3)
+        frame = cv2.resize(frame, None, fx = 0.7, fy = 0.7)
 
         # Get the current frame's timestamp
         current_time = cap.get(cv2.CAP_PROP_POS_MSEC) / 1000.0
 
         # Display the timestamp on the upper left corner
-        cv2.putText(frame, f'Time: {current_time:.2f} seconds', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+        cv2.putText(frame, f'Time: {current_time:.2f} seconds', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 0), 2)
 
 
         cv2.imshow('Frame', frame)
