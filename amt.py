@@ -8,7 +8,7 @@ def browse_file():
     root = tk.Tk()
     root.withdraw()  # Hide the root window
 
-    file_path = filedialog.askopenfilename()  # Open file dialog to select video file
+    file_path = filedialog.askopenfilename(initialdir = '/media/antony/data_drive/Nikita')  # Open file dialog to select video file
     return file_path
 
 def play_video(video_path, output_csv):
